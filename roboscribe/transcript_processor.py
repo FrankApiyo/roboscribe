@@ -49,7 +49,7 @@ class TranscriptProcessor:
             self.config.device,
             compute_type=self.config.compute_type
         )
-        result = model.transcribe(audio, batch_size=self.config.batch_size)
+        result = model.transcribe(audio, batch_size=self.config.batch_size, language=self.config.language)
         self._cleanup_gpu_memory(model)
         return result
 

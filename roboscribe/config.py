@@ -12,14 +12,15 @@ class TranscriptionConfig:
     batch_size: int = 16
     compute_type: str = "float16"
     model_name: str = "large-v2"
+    language: Optional[str] = None
 
 
 @dataclass
 class CleanupConfig:
     """Configuration settings for transcript cleanup model."""
 
-    model_name: str = "meta-llama/Llama-3.1-8B-Instruct"
-    # model_name: str = "google/gemma-2b-it"
+    # model_name: str = "meta-llama/Llama-3.1-8B-Instruct"
+    model_name: str = "google/gemma-2b-it"
     torch_dtype: str = "bfloat16"
     device_map: str = "auto"
     use_fast_tokenizer: bool = True
