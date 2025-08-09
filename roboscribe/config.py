@@ -13,6 +13,8 @@ class TranscriptionConfig:
     compute_type: str = "float16"
     model_name: str = "large-v2"
     language: Optional[str] = None
+    vad_filter: bool = True
+    diarization_model: str = "pyannote/speaker-diarization-3.1"
 
 
 @dataclass
